@@ -1,0 +1,155 @@
+:root {
+  --green-primary: #2e7d32;
+  --green-light: #a5d6a7;
+  --cream: #fffdf5;
+  --text-dark: #1b1b1b;
+  --radius: 12px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+body {
+  background: var(--cream);
+  color: var(--text-dark);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: var(--green-primary);
+  color: white;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.lang-switcher {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.lang-btn {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.lang-btn.active,
+.lang-btn:hover {
+  background: white;
+  color: var(--green-primary);
+}
+
+.container {
+  flex: 1;
+  max-width: 720px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+  color: var(--green-primary);
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.chat-panel {
+  background: white;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 60vh;
+}
+
+.chat-window {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.message {
+  max-width: 80%;
+  padding: 0.6rem 0.9rem;
+  border-radius: var(--radius);
+  line-height: 1.4;
+}
+
+.message.bot {
+  background: var(--green-light);
+  align-self: flex-start;
+}
+
+.message.user {
+  background: #e0e0e0;
+  align-self: flex-end;
+}
+
+.chat-input-row {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  border-top: 1px solid #eee;
+}
+
+#chat-input {
+  flex: 1;
+  padding: 0.6rem 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  font-size: 1rem;
+}
+
+.icon-btn {
+  border: none;
+  background: #eee;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.icon-btn.primary {
+  background: var(--green-primary);
+  color: white;
+}
+
+.app-footer {
+  text-align: center;
+  padding: 1rem;
+  color: #777;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 480px) {
+  .chat-panel {
+    height: 70vh;
+  }
+}
