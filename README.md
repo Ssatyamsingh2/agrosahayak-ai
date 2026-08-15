@@ -1,6 +1,6 @@
 # AgroSahayak AI 🌾
 
-A multilingual (English, Hindi, Haryanvi) web platform built to help farmers in Haryana, India get quick, practical support — crop disease guidance, nearby fertilizer shops, and government scheme information — without needing to read or type in English.
+A multilingual (English, Hindi, Haryanvi) web platform built to help farmers across India get quick, practical support — crop disease guidance, nearby fertilizer shops, and government scheme information — without needing to read or type in English.
 
 **Live demo:** open `index.html` in a browser, or serve the folder locally (see below).
 
