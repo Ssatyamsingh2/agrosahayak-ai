@@ -9,7 +9,8 @@
 //
 // fetchNearbyShops() below tries that endpoint first and, if it's not
 // available (as in this static demo), falls back to a bundled sample
-// dataset of fertilizer shops in Haryana so the page stays fully demoable.
+// dataset of fertilizer shops spanning multiple Indian states so the page
+// stays fully demoable for any location the user types, not just one region.
 
 const DEMO_SHOPS = [
   {
@@ -22,31 +23,85 @@ const DEMO_SHOPS = [
     lng: 77.0151,
   },
   {
-    name: "Haryana Beej Bhandar",
-    address: "Grain Market Road, Panipat, Haryana",
-    phone: "+91 98120 00002",
+    name: "Punjab Agro Traders",
+    address: "Model Town, Ludhiana, Punjab",
+    phone: "+91 98140 00002",
+    rating: 4.2,
+    open: true,
+    lat: 30.901,
+    lng: 75.8573,
+  },
+  {
+    name: "UP Kisan Seva Kendra",
+    address: "Civil Lines, Lucknow, Uttar Pradesh",
+    phone: "+91 98390 00003",
+    rating: 4.1,
+    open: false,
+    lat: 26.8467,
+    lng: 80.9462,
+  },
+  {
+    name: "Rajasthan Beej Bhandar",
+    address: "Station Road, Jaipur, Rajasthan",
+    phone: "+91 98290 00004",
+    rating: 4.4,
+    open: true,
+    lat: 26.9124,
+    lng: 75.7873,
+  },
+  {
+    name: "Krishi Sewa Kendra",
+    address: "Sadar Bazar, Indore, Madhya Pradesh",
+    phone: "+91 98260 00005",
     rating: 4.0,
     open: true,
-    lat: 29.3909,
-    lng: 76.9635,
+    lat: 22.7196,
+    lng: 75.8577,
   },
   {
-    name: "Kisan Agro Center",
-    address: "Delhi Road, Rohtak, Haryana",
-    phone: "+91 98120 00003",
+    name: "Maharashtra Fertilizer Depot",
+    address: "Shivaji Nagar, Pune, Maharashtra",
+    phone: "+91 98220 00006",
     rating: 4.5,
-    open: false,
-    lat: 28.8955,
-    lng: 76.6066,
+    open: true,
+    lat: 18.5308,
+    lng: 73.8478,
   },
   {
-    name: "Green Field Fertilizer & Seeds",
-    address: "Old Bus Stand, Jind, Haryana",
-    phone: "+91 98120 00004",
+    name: "Karnataka Agro Center",
+    address: "Yeshwanthpur, Bengaluru, Karnataka",
+    phone: "+91 98450 00007",
+    rating: 4.3,
+    open: false,
+    lat: 13.0284,
+    lng: 77.5541,
+  },
+  {
+    name: "Tamil Nadu Uzhavar Angadi Supplies",
+    address: "Koyambedu, Chennai, Tamil Nadu",
+    phone: "+91 98940 00008",
+    rating: 4.2,
+    open: true,
+    lat: 13.0732,
+    lng: 80.1946,
+  },
+  {
+    name: "Bengal Krishi Bhandar",
+    address: "Burrabazar, Kolkata, West Bengal",
+    phone: "+91 98300 00009",
     rating: 3.9,
     open: true,
-    lat: 29.3157,
-    lng: 76.3145,
+    lat: 22.5726,
+    lng: 88.363,
+  },
+  {
+    name: "Bihar Kisan Mart",
+    address: "Gandhi Maidan, Patna, Bihar",
+    phone: "+91 98350 00010",
+    rating: 4.0,
+    open: true,
+    lat: 25.6127,
+    lng: 85.1445,
   },
 ];
 
@@ -62,6 +117,16 @@ async function fetchNearbyShops(lat, lng, place) {
   } catch (err) {
     // Backend not available in this static demo — fall through to sample data.
   }
+
+  // No live backend: if the user typed a place name, filter the sample data
+  // by city/state so results feel relevant across all of India rather than
+  // always showing the same fixed list.
+  if (place) {
+    const q = place.trim().toLowerCase();
+    const matches = DEMO_SHOPS.filter((shop) => shop.address.toLowerCase().includes(q));
+    if (matches.length > 0) return matches;
+  }
+
   return DEMO_SHOPS;
 }
 
