@@ -12,7 +12,7 @@ const translations = {
     // Home page
     hero_title: "AgroSahayak AI — Your Farming Companion",
     hero_subtitle:
-      "Built for Haryana's farmers — detect crop diseases, find nearby fertilizer shops, and discover government schemes, all in your own language.",
+      "Built for Indian farmers — detect crop diseases, find nearby fertilizer shops, and discover government schemes, all in your own language.",
     feature_disease_title: "Crop Disease Detection",
     feature_disease_desc: "Upload a photo of your crop or leaf and get a likely diagnosis with remedies — read aloud in your language.",
     feature_shops_title: "Fertilizer Shop Finder",
@@ -37,8 +37,8 @@ const translations = {
 
     // Shop finder page
     shops_title: "Fertilizer Shop Finder",
-    shops_subtitle: "Find agriculture input shops near you.",
-    location_placeholder: "Enter your village or city",
+    shops_subtitle: "Find agriculture input shops near you, anywhere in India.",
+    location_placeholder: "Enter your city or state",
     use_location_btn: "📍 Use my location",
     search_btn: "Search",
     shops_notice: "Showing sample shop data for demo purposes. Live results require a Google Places API connection.",
@@ -61,7 +61,7 @@ const translations = {
 
     hero_title: "एग्रोसहायक AI — आपका कृषि साथी",
     hero_subtitle:
-      "हरियाणा के किसानों के लिए बनाया गया — फसल रोग पहचानें, नज़दीकी खाद की दुकानें खोजें, और सरकारी योजनाओं की जानकारी पाएं, वो भी अपनी भाषा में।",
+      "भारत के किसानों के लिए बनाया गया — फसल रोग पहचानें, नज़दीकी खाद की दुकानें खोजें, और सरकारी योजनाओं की जानकारी पाएं, वो भी अपनी भाषा में।",
     feature_disease_title: "फसल रोग पहचान",
     feature_disease_desc: "अपनी फसल या पत्ती की फोटो अपलोड करें और उपचार सहित संभावित रोग की जानकारी पाएं — अपनी भाषा में सुनें भी।",
     feature_shops_title: "खाद की दुकान खोजें",
@@ -83,8 +83,8 @@ const translations = {
     disease_disclaimer: "यह एक डेमो क्लासिफायर है, पोर्टफोलियो उद्देश्य के लिए। यह विशेषज्ञ कृषि सलाह का विकल्प नहीं है।",
 
     shops_title: "खाद की दुकान खोजें",
-    shops_subtitle: "अपने नज़दीक कृषि इनपुट की दुकानें खोजें।",
-    location_placeholder: "अपना गांव या शहर लिखें",
+    shops_subtitle: "भारत में कहीं भी अपने नज़दीक कृषि इनपुट की दुकानें खोजें।",
+    location_placeholder: "अपना शहर या राज्य लिखें",
     use_location_btn: "📍 मेरी लोकेशन उपयोग करें",
     search_btn: "खोजें",
     shops_notice: "यह डेमो के लिए नमूना दुकान डेटा दिखाया जा रहा है। लाइव परिणामों के लिए Google Places API जुड़ाव आवश्यक है।",
@@ -106,7 +106,7 @@ const translations = {
 
     hero_title: "एग्रोसहायक AI — थारा खेती का साथी",
     hero_subtitle:
-      "हरियाणा के किसानां खात्तर बणाया गया — फसल री बीमारी पिच्छाणो, धोरै की खाद की दुकानां टोहो, अर सरकारी योजनावां की जाणकारी लो, वा भी अपणी भाषा म्ह।",
+      "भारत के किसानां खात्तर बणाया गया — फसल री बीमारी पिच्छाणो, धोरै की खाद की दुकानां टोहो, अर सरकारी योजनावां की जाणकारी लो, वा भी अपणी भाषा म्ह।",
     feature_disease_title: "फसल रोग पिच्छाण",
     feature_disease_desc: "अपणी फसल या पत्ती की फोटू अपलोड करो अर इलाज समेत बीमारी की जाणकारी पावो — अपणी भाषा म्ह सुणो भी।",
     feature_shops_title: "खाद की दुकान टोहो",
@@ -128,8 +128,8 @@ const translations = {
     disease_disclaimer: "या एक डेमो क्लासिफायर सै, पोर्टफोलियो खात्तर। या माहिर सलाह की जगह ना सै।",
 
     shops_title: "खाद की दुकान टोहो",
-    shops_subtitle: "अपणे धोरै की खेती-सामान दुकानां टोहो।",
-    location_placeholder: "अपणा गांव या शहर लिक्खो",
+    shops_subtitle: "भारत म्ह किते भी अपणे धोरै की खेती-सामान दुकानां टोहो।",
+    location_placeholder: "अपणा शहर या राज्य लिक्खो",
     use_location_btn: "📍 मेरी लोकेशन बरतो",
     search_btn: "टोहो",
     shops_notice: "या डेमो खात्तर नमूना दुकान डेटा दिखाया जारया सै। लाइव परिणाम खात्तर Google Places API चाहिए।",
