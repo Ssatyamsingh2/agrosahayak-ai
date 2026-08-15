@@ -64,7 +64,7 @@ Being upfront about this matters for an interview: this is an honest work-in-pro
 | Voice output (browser fallback) | ✅ Fully working |
 | Voice output (ElevenLabs) | ⚙️ Wired up, needs an API key |
 | Disease detection | 🧪 Demo classifier — picks from a small local dataset to simulate a diagnosis. Built so `classifyImage()` in `js/disease.js` can be swapped for a real model (TensorFlow.js in-browser, or a backend inference endpoint) without touching the UI. |
-| Shop finder | 🧪 Demo data — shows a bundled sample dataset of Haryana fertilizer shops. `fetchNearbyShops()` in `js/shops.js` already tries a `/api/shops` backend first, and only falls back to sample data if that endpoint isn't available. |
+| Shop finder | 🧪 Demo data — shows a bundled sample dataset of fertilizer shops spanning multiple Indian states. `fetchNearbyShops()` in `js/shops.js` already tries a `/api/shops` backend first, and only falls back to sample data if that endpoint isn't available. |
 | Government schemes | ✅ Real, curated scheme data (names, descriptions, official links) |
 | Labour booking / Expert booking | 📋 Scoped, not yet built |
 
